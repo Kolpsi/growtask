@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style-min.css" rel="stylesheet">
+  <link href="css/owl.carousel.min.css" rel="stylesheet">
   <link rel="preload" href="/fonts/stapel-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/fonts/raleway-semibold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/fonts/raleway-regular.woff2" as="font" crossorigin="anonymous">
   <title>growtask</title>
 </head>
+
 <body>
   <!-- шапка сайта -->
   <header class="page-header">
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="logo">
-        <a class="logo__link" href="" >
+        <a class="logo__link" href="">
           <img class="logo__image" src="img/logo.svg" alt="growtask" width="182" height="16">
-        </a> 
+        </a>
       </div>
       <!-- меню навигации -->
       <ul class="site-list">
@@ -36,17 +39,53 @@
     <p class="page-main__text">Тестовое задание</p>
     <div class="page-main__background"></div>
     <button type="button" class="modal-button">Модальное окно</button>
+    <!-- слайдер -->
+    <section class="slider">
+      <h2 class="slider__title">Слайдер</h2>
+      <ul class="slider-list owl-carousel slide-one">
+        <li class="slider-list__item"><img src="img/slider-img.png" alt="фото мужчины с собакой" width="375" height="280"></li>
+        <li class="slider-list__item"><img src="img/slider-img2.png" alt="фото людей стоящих вокруг руки" width="375" height="280"></li>
+        <li class="slider-list__item"><img src="img/slider-img3.png" alt="фото разных людей" width="375" height="280"></li>
+      </div>
+    </section>
+    <!-- карточки товаров -->
+    <section class="cards">
+      <h2 class="cards__title">Карточки</h2>
+      <ul class="cards__list owl-carousel slide-two">
+        <li class="cards__item">
+          <img src="img/card-img.png" alt="фото товара">
+          <h3 class="cards__item-title">Услуга 1 Услуга 1</h3>
+          <p class="cards__item-description">Описание Описание Описание Описание Описание ОписаниеОписание Описание Описание</p>
+          <button type="button" class="modal-button">Модальное окно</button>
+        </li>
+        <li class="cards__item">
+          <img src="img/card-img2.png" alt="фото товара">
+          <h3 class="cards__item-title">Услуга 2 Услуга 2</h3>
+          <p class="cards__item-description">Описание Описание Описание Описание Описание ОписаниеОписание Описание Описание</p>
+          <button type="button" class="modal-button">Модальное окно</button>
+        </li>
+        <li class="cards__item">
+          <img src="img/card-img3.png" alt="фото товара">
+          <h3 class="cards__item-title">Услуга 3 Услуга 3</h3>
+          <p class="cards__item-description">Описание Описание Описание Описание Описание ОписаниеОписание Описание Описание</p>
+          <button type="button" class="modal-button">Модальное окно</button>
+        </li>
+      </ul>
+    </section>
   </main>
-  <!-- модальное окно --> 
+  <!-- модальное окно -->
   <article class="modal">
     <div class="logo">
-      <a class="logo__link" href="" >
+      <a class="logo__link" href="">
         <img class="logo__image" src="img/logo.svg" alt="growtask" width="182" height="16">
-      </a> 
+      </a>
     </div>
     <button class="modal__close"></button>
     <h2 class="modal__title">Модалка</h2>
   </article>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>
