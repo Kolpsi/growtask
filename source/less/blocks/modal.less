@@ -1,0 +1,38 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #ffffffff;
+  padding: 25px 0 0 0;
+
+  width: 375px;
+  min-height: 667px;
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border: 0;
+
+    width: 36px;
+    height: 36px;
+
+    background: url("../img/icon-cross.svg") center no-repeat;
+  }
+}
+
+.modal__title {
+  font-family: Stapel;
+  font-size: 38px;
+  font-weight: 700;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}

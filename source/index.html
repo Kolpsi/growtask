@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/style-min.css" rel="stylesheet">
+  <link rel="preload" href="/fonts/stapel-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/raleway-semibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/raleway-regular.woff2" as="font" crossorigin="anonymous">
   <title>growtask</title>
 </head>
 <body>
@@ -30,7 +33,20 @@
   <!-- основной контент -->
   <main class="page-main">
     <h1 class="page-main__title">growtask</h1>
+    <p class="page-main__text">Тестовое задание</p>
+    <div class="page-main__background"></div>
+    <button type="button" class="modal-button">Модальное окно</button>
   </main>
+  <!-- модальное окно --> 
+  <article class="modal">
+    <div class="logo">
+      <a class="logo__link" href="" >
+        <img class="logo__image" src="img/logo.svg" alt="growtask" width="182" height="16">
+      </a> 
+    </div>
+    <button class="modal__close"></button>
+    <h2 class="modal__title">Модалка</h2>
+  </article>
   <script src="js/script.js"></script>
 </body>
 </html>

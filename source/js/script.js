@@ -1,5 +1,8 @@
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
+const navMain = document.querySelector('.main-nav');
+const navToggle = document.querySelector('.main-nav__toggle');
+const modalButton = document.querySelector('.modal-button');
+const modal = document.querySelector('.modal');
+const modalClose = modal.querySelector('.modal__close');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -12,3 +15,13 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+modalButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  modal.style.display = 'block';
+})
+
+modalClose.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  modal.style.display = 'none';
+})
