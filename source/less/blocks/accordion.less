@@ -1,0 +1,71 @@
+.listing {
+  margin: 20px 0;
+  &__item {
+    background-color: #F9F9F9;
+    position: relative;
+    
+  }
+}
+
+.listing .listing__text {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  height: 0;
+  background-color: #F9F9F9;
+  line-height: 18px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  transition: color 0.5s, padding 0.5s;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.listing .listing__text p {
+  margin: 0 0 10px;
+}
+
+.listing__label {
+  cursor: pointer;
+  background-color: #F0EBEC;
+  display: block;
+  padding: 26px 12px 26px 12px;
+  box-sizing: border-box;
+  z-index: 100;
+  font-size: 18px;
+  font-family: "Stapel", arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 10px;
+  min-height: 80px;
+}
+
+.listing input {
+  display: none;
+}
+
+.listing__label:before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 15px;
+  right: 13px;
+  background: url("../img/card-next.svg") center no-repeat;
+}
+
+.listing input:checked+label {
+  background-color: #F9F9F9;
+}
+
+.listing input:checked+label:before {
+  transition: transform .35s;
+  transform: rotate(90deg);
+}
+
+.listing input:checked+label+.listing__text {
+  height: auto;
+  margin-top: -5px;
+  color: #000;
+  padding: 20px 30px 10px;
+}

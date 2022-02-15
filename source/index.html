@@ -29,7 +29,7 @@
         <li class="site-list__item"><a class="site-list__link" href="">Карточки</a></li>
         <li class="site-list__item"><a class="site-list__link" href="">Форма</a></li>
         <li class="site-list__item"><a class="site-list__link" href="">Список</a></li>
-        <li class="site-list__item"><a class="site-list__link" href="">Модалка</a></li>
+        <li class="site-list__item"><a class="site-list__link modal-button" href="">Модалка</a></li>
       </ul>
     </nav>
   </header>
@@ -43,10 +43,13 @@
     <section class="slider">
       <h2 class="slider__title">Слайдер</h2>
       <ul class="slider-list owl-carousel slide-one">
-        <li class="slider-list__item"><img src="img/slider-img.png" alt="фото мужчины с собакой" width="375" height="280"></li>
-        <li class="slider-list__item"><img src="img/slider-img2.png" alt="фото людей стоящих вокруг руки" width="375" height="280"></li>
-        <li class="slider-list__item"><img src="img/slider-img3.png" alt="фото разных людей" width="375" height="280"></li>
-      </div>
+        <li class="slider-list__item"><img src="img/slider-img.png" alt="фото мужчины с собакой" width="375"
+            height="280"></li>
+        <li class="slider-list__item"><img src="img/slider-img2.png" alt="фото людей стоящих вокруг руки" width="375"
+            height="280"></li>
+        <li class="slider-list__item"><img src="img/slider-img3.png" alt="фото разных людей" width="375" height="280">
+        </li>
+        </div>
     </section>
     <!-- карточки товаров -->
     <section class="cards">
@@ -55,22 +58,66 @@
         <li class="cards__item">
           <img src="img/card-img.png" alt="фото товара">
           <h3 class="cards__item-title">Услуга 1 Услуга 1</h3>
-          <p class="cards__item-description">Описание Описание Описание Описание Описание ОписаниеОписание Описание Описание</p>
+          <p class="cards__item-description">Описание Описание Описание Описание Описание ОписаниеОписание Описание
+            Описание</p>
           <button type="button" class="modal-button">Модальное окно</button>
         </li>
         <li class="cards__item">
           <img src="img/card-img2.png" alt="фото товара">
           <h3 class="cards__item-title">Услуга 2 Услуга 2</h3>
-          <p class="cards__item-description">Описание Описание Описание Описание Описание ОписаниеОписание Описание Описание</p>
+          <p class="cards__item-description">Описание Описание Описание Описание Описание ОписаниеОписание Описание
+            Описание</p>
           <button type="button" class="modal-button">Модальное окно</button>
         </li>
         <li class="cards__item">
           <img src="img/card-img3.png" alt="фото товара">
           <h3 class="cards__item-title">Услуга 3 Услуга 3</h3>
-          <p class="cards__item-description">Описание Описание Описание Описание Описание ОписаниеОписание Описание Описание</p>
+          <p class="cards__item-description">Описание Описание Описание Описание Описание ОписаниеОписание Описание
+            Описание</p>
           <button type="button" class="modal-button">Модальное окно</button>
         </li>
       </ul>
+    </section>
+    <!-- Форма -->
+    <section class="form-wrapper">
+      <h2 class="form__title">Форма</h2>
+      <p class="form__text">Стандартная форма обратной связи</p>
+      <form action="post" class="form">
+        <input class="form__name" type="text" name="name" id="name" placeholder="Имя*" required>
+        <input class="form__number" type="numer" name="number" id="number" placeholder="Телефон*" required>
+        <textarea class="form__textarea" name="textarea" id="textarea" cols="30" rows="8"
+          placeholder="Напиши чего хочешь"></textarea>
+        <button type="submit" class="form__button">Отправить</button>
+        <button type="reset" class="form__button-reset">Не отправлять</button>
+      </form>
+    </section>
+    <!-- список -->
+    <section class="listing">
+      <div class="listing__item">
+        <input type="radio" name="acor" id="acor1" checked="checked" />
+        <label class="listing__label" for="acor1">Список 1</label>
+        <div class="listing__text">
+          <p>Тут как с водопроводом: количество потребляемой воды на квартиру зависит от количества людей и их
+            потребностей.
+            Внимание! Роутер можно взять в аренду, но в этом случае к вам может попасть устаревшее или даже неисправное
+            оборудование, что может сказаться на качестве услуг и нашей репутации. Так же вы можете воспользоваться
+            беспроцентной рассрочкой.</p>
+        </div>
+      </div>
+      <div class="listing__item">
+        <input type="radio" name="acor" id="acor2" />
+        <label class="listing__label" for="acor2">Список 2</label>
+        <div class="listing__text">
+          <p>Описание вкладки</p>
+        </div>
+      </div>
+      <div class="listing__item">
+        <input type="radio" name="acor" id="acor3" />
+        <label class="listing__label" for="acor3">Список 3</label>
+        <div class="listing__text">
+          <p>Описание вкладки</p>
+        </div>
+      </div>
     </section>
   </main>
   <!-- модальное окно -->
@@ -86,6 +133,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/owl.js"></script>
 </body>
 
 </html>
