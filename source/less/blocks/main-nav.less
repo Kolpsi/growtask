@@ -1,0 +1,66 @@
+.main-nav {
+    margin-top: 25px;
+    position: relative;
+}
+
+// переключение главного меню в мобильном разрешении
+@media (max-width: @mobile-width-only) {
+    .main-nav--nojs .main-nav__toggle {
+      display: none;
+    }
+  
+    .main-nav--closed .site-list {
+      display: none;
+    }
+  
+    .main-nav--nojs .site-list {
+      display: block;
+    }
+  
+    .main-nav__toggle {
+      position: absolute;
+      right: 15px;
+      top: -20px;
+      z-index: 2;
+  
+      display: block;
+      width: 40px;
+      height: 40px;
+  
+      background-color: #ffffffff;
+      border: none;
+      cursor: pointer;
+    }
+  
+    .main-nav--closed .main-nav__toggle::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 7px;
+  
+      width: 36px;
+      height: 2px;
+  
+      background-color: #000000;
+      box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+    }
+  
+    .main-nav--opened .main-nav__toggle {
+      top: 5px;
+      right: 0;
+  
+      background-color: #ffffffff;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+  
+        width: 23px;
+        height: 22px;
+  
+        background: url("../img/icon-cross.svg") center no-repeat;
+      }
+    }
+  }
