@@ -16,11 +16,13 @@
   <!-- шапка сайта -->
   <header class="page-header">
     <nav class="main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="logo">
-        <a class="logo__link" href="">
-          <img class="logo__image" src="img/logo.svg" alt="growtask" width="182" height="16">
-        </a>
+      <div class="main-nav__wrapper">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="logo">
+          <a class="logo__link" href="">
+            <img class="logo__image" src="img/logo.svg" alt="growtask" width="182" height="16">
+          </a>
+        </div>
       </div>
       <!-- меню навигации -->
       <ul class="site-list">
@@ -84,7 +86,7 @@
       <p class="form__text">Стандартная форма обратной связи</p>
       <form action="post" class="form">
         <input class="form__name" type="text" name="name" id="name" placeholder="Имя*" required>
-        <input class="form__number" type="numer" name="number" id="number" placeholder="Телефон*" required>
+        <input class="form__number" type="number" name="number" id="number" placeholder="Телефон*" required>
         <textarea class="form__textarea" name="textarea" id="textarea" cols="30" rows="8"
           placeholder="Напиши чего хочешь"></textarea>
         <button type="submit" class="form__button">Отправить</button>
@@ -97,7 +99,8 @@
         <input type="radio" name="acor" id="acor1" checked="checked" />
         <label class="listing__label" for="acor1">Список 1</label>
         <div class="listing__text">
-          <p>Тут как с водопроводом: количество потребляемой воды на квартиру зависит от количества людей и их
+          <p class="listing__description">Тут как с водопроводом: количество потребляемой воды на квартиру зависит от
+            количества людей и их
             потребностей.
             Внимание! Роутер можно взять в аренду, но в этом случае к вам может попасть устаревшее или даже неисправное
             оборудование, что может сказаться на качестве услуг и нашей репутации. Так же вы можете воспользоваться
@@ -108,18 +111,31 @@
         <input type="radio" name="acor" id="acor2" />
         <label class="listing__label" for="acor2">Список 2</label>
         <div class="listing__text">
-          <p>Описание вкладки</p>
+          <p class="listing__description">Описание вкладки</p>
         </div>
       </div>
       <div class="listing__item">
         <input type="radio" name="acor" id="acor3" />
         <label class="listing__label" for="acor3">Список 3</label>
         <div class="listing__text">
-          <p>Описание вкладки</p>
+          <p class="listing__description">Описание вкладки</p>
         </div>
       </div>
     </section>
   </main>
+  <!-- футер главной страницы -->
+  <footer class="main-footer">
+    <nav class="footer__nav">
+      <ul class="site-list">
+        <li class="site-list__item"><a class="site-list__link" href="">Главная</a></li>
+        <li class="site-list__item"><a class="site-list__link" href="">Слайдер</a></li>
+        <li class="site-list__item"><a class="site-list__link" href="">Карточки</a></li>
+        <li class="site-list__item"><a class="site-list__link" href="">Форма</a></li>
+        <li class="site-list__item"><a class="site-list__link" href="">Список</a></li>
+        <li class="site-list__item"><a class="site-list__link modal-button" href="">Модалка</a></li>
+      </ul>
+    </nav>
+  </footer>
   <!-- модальное окно -->
   <article class="modal">
     <div class="logo">
@@ -134,6 +150,7 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/owl.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

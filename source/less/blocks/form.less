@@ -1,13 +1,15 @@
 .form {
-    background-color: #ffffffff;
-    width: 330px;
-    margin: 0 auto;
-    
-    &-wrapper {
-        min-height: 825px;
-        background: url("../img/form-background.png") no-repeat bottom;
-        text-align: center;
-    }
+  position: relative;
+  background-color: #ffffffff;
+  width: 330px;
+  margin: 0 auto;
+
+  &-wrapper {
+    min-height: 825px;
+    background: url("../img/form-background.png") no-repeat bottom;
+    text-align: center;
+  }
+
   &__title {
     font-family: "Stapel", arial, sans-serif;
     font-size: 32px;
@@ -28,14 +30,29 @@
     width: 300px;
     height: 44px;
     padding-left: 16px;
-    margin: 0 0 44px 18px;
+    margin: 0 0 0 18px;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:focus-visible {
+      border: 1px solid #BC0000;
+      outline: none;
+    }
   }
 
   &__number {
     width: 300px;
     height: 44px;
     padding-left: 16px;
-    margin: 0 0 44px 18px;
+    margin: 44px 0 0 18px;
+    &:hover,
+    &:focus,
+    &:active,
+    &:focus-visible {
+      border: 1px solid #BC0000;
+      outline: none;
+    }
   }
 
   &__textarea {
@@ -43,7 +60,14 @@
     height: 112px;
     resize: none;
     padding: 16px 0 0 16px;
-    margin: 0 0 44px 18px;
+    margin: 44px 0 44px 18px;
+    &:hover,
+    &:focus,
+    &:active,
+    &:focus-visible {
+      border: 1px solid #BC0000;
+      outline: none;
+    }
   }
 
   &__button {
@@ -68,4 +92,16 @@
     background-color: #ffffffff;
     margin-bottom: 44px;
   }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.error-message {
+  color: #BC0000;
+  text-align: left;
+  margin: 0 0 0 30px;
 }
