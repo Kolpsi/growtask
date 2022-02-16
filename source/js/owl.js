@@ -1,3 +1,6 @@
+/**
+ * @description модуль активации и настройки карусели
+ */
 $(document).ready(function(){
     $(".slide-one").owlCarousel({
       loop: true,
@@ -5,12 +8,13 @@ $(document).ready(function(){
         responsive: {
          0:{
               items:1,
-              navText: ["", "<img src='../img/button-next.svg'>"]
+              navText: ["", "<img class='nav-next'>"]
           },
           1200:{
-              items:3,
-              nav:true,
-              navText: ["<img src='../img/button-next.svg'>", "<img src='../img/button-next.svg'>"]
+            items:1,
+            navText: ["<img class='nav-prev'>", "<img class='nav-next'>"],
+            stagePadding: 480,
+            margin: 0
           }
         }
       });
@@ -20,14 +24,14 @@ $(document).ready(function(){
           responsive: {
            0:{
                 items:1,
-                navText: ["<img src='../img/card-back.svg'>", "<img src='../img/card-next.svg'>"],
+                navText: ["<img class='nav-prev'>", "<img class='nav-next'>"],
                 stagePadding: 50,
                 margin: 20
             },
             1200:{
                 items:3,
                 nav:true,
-                navText: ["<img src='../img/button-next.svg'>", "<img src='../img/button-next.svg'>"]
+                navText: ["<img class='nav-prev'>", "<img class='nav-next'>"]
             }
           }
         });

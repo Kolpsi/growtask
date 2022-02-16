@@ -1,10 +1,18 @@
 // стили аккордеона
 .listing {
   margin: 20px 0;
+
   &__item {
     background-color: #F9F9F9;
     position: relative;
-    
+  }
+
+  &__title {
+    font-family: "Stapel", arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+    margin: 0 0 24px 12px;
   }
 }
 
@@ -19,6 +27,8 @@
   transition: color 0.5s, padding 0.5s;
   overflow: hidden;
   font-size: 16px;
+  text-align: left;
+
 }
 
 .listing__description {
@@ -69,4 +79,40 @@
   margin-top: -5px;
   color: #000;
   padding: 20px 30px 10px;
+}
+
+@media (min-width: @desktop-width) {
+  .listing {
+    margin: auto;
+    width: 1161px;
+
+    &__title {
+      font-size: 64px;
+      margin-bottom: 32px
+    }
+
+    &__label {
+      padding: 32px 0 0 32px;
+      font-size: 26px;
+      line-height: 15px;
+    }
+
+    &__text {
+      font-size: 20px;
+      padding-bottom: 32px;
+    }
+
+    &__item {
+      margin-bottom: 12px;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+  }
+
+  .listing .listing__text {
+    margin: 0;
+    width: 650px;
+  }
 }

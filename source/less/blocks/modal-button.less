@@ -1,3 +1,4 @@
+// кнопки вызова модального окна
 .modal-button {
   padding: 12px 20px 12px 20px;
   font-size: 16px;
@@ -6,4 +7,32 @@
   font-weight: 600;
   width: 200px;
   margin: auto;
+
+  &:hover {
+    background-color: #F63765;
+    color: #ffffff;
+    border: none;
+  }
+
+  &:active {
+    background-color: #AD0E35;
+    color: #ffffff;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal-button {
+    height: 44px;
+    width: 200px;
+    left: 260px;
+    top: 527px;
+    border-radius: 0px;
+    padding: 12px, 20px, 12px, 20px;
+
+    &__main {
+      position: absolute;
+      top: 500px;
+    }
+  }
 }

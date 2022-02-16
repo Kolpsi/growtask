@@ -13,8 +13,18 @@
     color: #000000;
     text-decoration: none;
     display: block;
+    &:hover {
+      color: #F63765;
+    }
+    &:active {
+      color: #AD0E35;
+    }
+    &-active {
+      color: #AD0E35;
+    }
   }
 }
+
 
 .site-list .modal-button {
   border: none;
@@ -23,4 +33,26 @@
   margin: 0 0 0 0;
   padding: 0;
   font-weight: 400;
+  &:hover {
+    color:#F63765;
+    background-color: #fff;
+  }
+  &:active {
+    color:#AD0E35;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    background-color: #ffffffff;
+    position: fixed;
+    top: 0;
+    left: 300px;
+    width: 1420px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    z-index: 6;
+  }
 }

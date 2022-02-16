@@ -1,3 +1,4 @@
+// основной контент
 .page-main {
   width: 375px;
   text-align: center;
@@ -22,4 +23,25 @@
   background: url("../img/main-background.jpg") no-repeat center;
   height: 430px;
   width: 375px;
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+      margin-top: 100px;
+    width: 100%;
+    background: url("../img/background-desktop.jpg") no-repeat top right;
+    &__background {
+      width: 100%;
+      min-height: 916px;
+      background: none;
+    }
+    &__title {
+        margin: 312px 0 0 260px;
+        font-size: 72px;
+    }
+    &__text {
+        margin: 30px 0 0 260px;
+        font-size: 24px;
+    }
+  }
 }

@@ -26,11 +26,11 @@
       </div>
       <!-- меню навигации -->
       <ul class="site-list">
-        <li class="site-list__item"><a class="site-list__link" href="">Главная</a></li>
-        <li class="site-list__item"><a class="site-list__link" href="">Слайдер</a></li>
-        <li class="site-list__item"><a class="site-list__link" href="">Карточки</a></li>
-        <li class="site-list__item"><a class="site-list__link" href="">Форма</a></li>
-        <li class="site-list__item"><a class="site-list__link" href="">Список</a></li>
+        <li class="site-list__item"><a class="site-list__link site-list__link-active" href="index.html">Главная</a></li>
+        <li class="site-list__item"><a class="site-list__link" href="#slide">Слайдер</a></li>
+        <li class="site-list__item"><a class="site-list__link" href="#cards">Карточки</a></li>
+        <li class="site-list__item"><a class="site-list__link" href="#form">Форма</a></li>
+        <li class="site-list__item"><a class="site-list__link" href="#accordion">Список</a></li>
         <li class="site-list__item"><a class="site-list__link modal-button" href="">Модалка</a></li>
       </ul>
     </nav>
@@ -40,21 +40,22 @@
     <h1 class="page-main__title">growtask</h1>
     <p class="page-main__text">Тестовое задание</p>
     <div class="page-main__background"></div>
-    <button type="button" class="modal-button">Модальное окно</button>
+    <button type="button" class="modal-button modal-button__main">Модальное окно</button>
     <!-- слайдер -->
-    <section class="slider">
+    <section class="slider" id="slide">
       <h2 class="slider__title">Слайдер</h2>
       <ul class="slider-list owl-carousel slide-one">
-        <li class="slider-list__item"><img src="img/slider-img.png" alt="фото мужчины с собакой" width="375"
-            height="280"></li>
-        <li class="slider-list__item"><img src="img/slider-img2.png" alt="фото людей стоящих вокруг руки" width="375"
-            height="280"></li>
-        <li class="slider-list__item"><img src="img/slider-img3.png" alt="фото разных людей" width="375" height="280">
+        <li class="slider-list__item"><img class="slider-list__image" src="img/slider-img.png"
+            alt="фото мужчины с собакой" width="375" height="280"></li>
+        <li class="slider-list__item"><img class="slider-list__image" src="img/slider-img2.png"
+            alt="фото людей стоящих вокруг руки" width="375" height="280"></li>
+        <li class="slider-list__item"><img class="slider-list__image" src="img/slider-img3.png" alt="фото разных людей"
+            width="375" height="280">
         </li>
         </div>
     </section>
     <!-- карточки товаров -->
-    <section class="cards">
+    <section class="cards" id="cards">
       <h2 class="cards__title">Карточки</h2>
       <ul class="cards__list owl-carousel slide-two">
         <li class="cards__item">
@@ -78,23 +79,35 @@
             Описание</p>
           <button type="button" class="modal-button">Модальное окно</button>
         </li>
+        <li class="cards__item">
+          <img src="img/card-img3.png" alt="фото товара">
+          <h3 class="cards__item-title">Услуга 4 Услуга 4</h3>
+          <p class="cards__item-description">Описание Описание Описание Описание Описание ОписаниеОписание Описание
+            Описание</p>
+          <button type="button" class="modal-button">Модальное окно</button>
+        </li>
       </ul>
     </section>
     <!-- Форма -->
-    <section class="form-wrapper">
-      <h2 class="form__title">Форма</h2>
-      <p class="form__text">Стандартная форма обратной связи</p>
-      <form action="post" class="form">
-        <input class="form__name" type="text" name="name" id="name" placeholder="Имя*" required>
-        <input class="form__number" type="number" name="number" id="number" placeholder="Телефон*" required>
-        <textarea class="form__textarea" name="textarea" id="textarea" cols="30" rows="8"
-          placeholder="Напиши чего хочешь"></textarea>
-        <button type="submit" class="form__button">Отправить</button>
-        <button type="reset" class="form__button-reset">Не отправлять</button>
-      </form>
+    <section class="form-wrapper" id="form">
+      <div class="form__container">
+        <h2 class="form__title">Форма</h2>
+        <p class="form__text">Стандартная форма обратной связи</p>
+        <form action="post" class="form">
+          <input class="form__name" type="text" name="name" id="name" placeholder="Имя*" required>
+          <input class="form__number" type="number" name="number" id="number" placeholder="Телефон*" required>
+          <textarea class="form__textarea" name="textarea" id="textarea" cols="30" rows="8"
+            placeholder="Напиши чего хочешь"></textarea>
+          <div class="form__button-wrapper">
+            <button type="submit" class="form__button">Отправить</button>
+            <button type="reset" class="form__button-reset">Не отправлять</button>
+          </div>
+        </form>
+      </div>
     </section>
     <!-- список -->
-    <section class="listing">
+    <section class="listing" id="accordion">
+      <h2 class="listing__title">Список</h2>
       <div class="listing__item">
         <input type="radio" name="acor" id="acor1" checked="checked" />
         <label class="listing__label" for="acor1">Список 1</label>
@@ -126,8 +139,8 @@
   <!-- футер главной страницы -->
   <footer class="main-footer">
     <nav class="footer__nav">
-      <ul class="site-list">
-        <li class="site-list__item"><a class="site-list__link" href="">Главная</a></li>
+      <ul class="site-list__footer">
+        <li class="site-list__item"><a class="site-list__link site-list__link-active" href="">Главная</a></li>
         <li class="site-list__item"><a class="site-list__link" href="">Слайдер</a></li>
         <li class="site-list__item"><a class="site-list__link" href="">Карточки</a></li>
         <li class="site-list__item"><a class="site-list__link" href="">Форма</a></li>
@@ -138,19 +151,22 @@
   </footer>
   <!-- модальное окно -->
   <article class="modal">
-    <div class="logo">
-      <a class="logo__link" href="">
-        <img class="logo__image" src="img/logo.svg" alt="growtask" width="182" height="16">
-      </a>
+    <div class="modal-wrapper">
+      <div class="logo">
+        <a class="logo__link" href="">
+          <img class="logo__image" src="img/logo.svg" alt="growtask" width="182" height="16">
+        </a>
+      </div>
+      <button class="modal__close"></button>
+      <h2 class="modal__title">Модалка</h2>
     </div>
-    <button class="modal__close"></button>
-    <h2 class="modal__title">Модалка</h2>
   </article>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/owl.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>

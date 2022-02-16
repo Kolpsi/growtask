@@ -1,3 +1,4 @@
+// стили формы
 .form {
   position: relative;
   background-color: #ffffffff;
@@ -46,6 +47,7 @@
     height: 44px;
     padding-left: 16px;
     margin: 44px 0 0 18px;
+
     &:hover,
     &:focus,
     &:active,
@@ -61,6 +63,7 @@
     resize: none;
     padding: 16px 0 0 16px;
     margin: 44px 0 44px 18px;
+
     &:hover,
     &:focus,
     &:active,
@@ -79,8 +82,21 @@
     height: 44px;
     width: 300px;
     border-radius: 0px;
+    border: 1px solid #0D0D0D;
     padding: 12px, 20px, 12px, 20px;
     margin: 0 0 16px 0;
+
+    &:hover {
+      background-color: #F63765;
+      color: #ffffff;
+      border: none;
+    }
+
+    &:active {
+      background-color: #AD0E35;
+      color: #ffffff;
+      border: none;
+    }
   }
 
   &__button-reset {
@@ -91,6 +107,14 @@
     padding: 12px, 0px, 12px, 0px;
     background-color: #ffffffff;
     margin-bottom: 44px;
+
+    &:hover {
+      color: #F63765;
+    }
+
+    &:active {
+      color: #AD0E35;
+    }
   }
 }
 
@@ -104,4 +128,54 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #BC0000;
   text-align: left;
   margin: 0 0 0 30px;
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 480px;
+
+    &-wrapper {
+      background: url("../img/form-bg-desktop.jpg") no-repeat left,
+        url("../img/form-bg-desktop2.jpg") no-repeat right;
+      margin-bottom: 160px;
+    }
+
+    &__container {
+      width: 680px;
+      min-height: 710px;
+      background-color: #ffffffff;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 64px;
+      margin: 80px 0 30px 117px;
+    }
+
+    &__text {
+      font-size: 20px;
+      margin: 0 0 56px 117px;
+    }
+
+    &__name {
+      width: 440px;
+    }
+
+    &__number {
+      width: 440px;
+    }
+
+    &__textarea {
+      width: 440px;
+    }
+
+    &__button-wrapper {
+      width: 100%;
+      display: flex;
+    }
+
+    &__button {
+      order: 2;
+    }
+  }
 }

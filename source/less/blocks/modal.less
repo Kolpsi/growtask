@@ -1,3 +1,12 @@
+@keyframes fadeInFromNone {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -11,7 +20,15 @@
 
   width: 375px;
   min-height: 667px;
-// кнопка закрытия модального окна
+  
+
+  &-open {
+      display: block;
+      animation: fadeInFromNone 0.5s ease-in-out;
+      animation-fill-mode: forwards;
+  }
+
+  // кнопка закрытия модального окна
   &__close {
     position: absolute;
     top: 15px;
@@ -23,6 +40,7 @@
 
     background: url("../img/icon-cross.svg") center no-repeat;
   }
+
   &__title {
     font-family: "Stapel", arial, sans-serif;
     font-size: 38px;
@@ -46,4 +64,28 @@
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%)
+}
+
+@media (min-width: @desktop-width) {
+  .modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 989;
+    background-color: #04040466;
+  }
+
+  .modal-wrapper {
+    width: 680px;
+    min-height: 480px;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #ffffffff;
+    padding: 25px 0 0 0;
+  }
 }

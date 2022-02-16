@@ -1,3 +1,4 @@
+// модуль с карточками товара
 .cards {
   &__list {
     padding: 0;
@@ -35,4 +36,38 @@
 .cards .modal-button {
   width: 260px;
   height: 44px;
+}
+
+@media (min-width: @desktop-width) {
+  .cards {
+    &__item {
+      margin-left: 10px;
+
+      &:hover {
+        box-shadow: 0 10px 25px 0 rgb(0 0 0 / 50%);
+      }
+    }
+
+    &__title {
+      font-size: 64px;
+      margin: 0 0 60px 540px;
+    }
+
+    &__list {
+      width: 1400px;
+    }
+
+    &__item-title {
+      font-size: 26px;
+    }
+
+    &__item-descripton {
+      font-size: 20px;
+    }
+  }
+
+  .cards .cards__list {
+    width: 1400px;
+    margin: auto;
+  }
 }
