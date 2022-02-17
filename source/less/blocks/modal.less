@@ -8,24 +8,27 @@
 }
 
 .modal {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 9999;
-  background-color: #ffffffff;
-  padding: 25px 0 0 0;
 
+  display: none;
   width: 375px;
   min-height: 667px;
-  
+  padding: 25px 0 0 0;
+
+  background-color: #ffffffff;
+
 
   &-open {
-      display: block;
-      animation: fadeInFromNone 0.5s ease-in-out;
-      animation-fill-mode: forwards;
+    display: block;
+
+    animation: fadeInFromNone 0.5s ease-in-out;
+
+    animation-fill-mode: forwards;
   }
 
   // кнопка закрытия модального окна
@@ -33,59 +36,69 @@
     position: absolute;
     top: 15px;
     right: 20px;
-    border: 0;
 
     width: 36px;
     height: 36px;
 
     background: url("../img/icon-cross.svg") center no-repeat;
+    border: 0;
   }
 
   &__title {
-    font-family: "Stapel", arial, sans-serif;
-    font-size: 38px;
-    font-weight: 700;
     position: absolute;
-    margin: 0;
     top: 50%;
     left: 50%;
+
+    margin: 0;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+
+    font-weight: 700;
+    font-size: 38px;
+    font-family: "Stapel", arial, sans-serif;
+
+    transform: translate(-50%, -50%);
   }
 }
 
 .modal__title {
-  font-family: "Stapel", arial, sans-serif;
-  font-size: 38px;
-  font-weight: 700;
   position: absolute;
-  margin: 0;
   top: 50%;
   left: 50%;
+
+  margin: 0;
   margin-right: -50%;
-  transform: translate(-50%, -50%)
+
+  font-weight: 700;
+  font-size: 38px;
+  font-family: "Stapel", arial, sans-serif;
+
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: @desktop-width) {
   .modal {
     position: fixed;
+    z-index: 989;
+
     width: 100%;
     height: 100%;
-    z-index: 989;
+
     background-color: #04040466;
   }
 
   .modal-wrapper {
-    width: 680px;
-    min-height: 480px;
     position: absolute;
-    margin: 0;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
     z-index: 9999;
-    background-color: #ffffffff;
+
+    width: 680px;
+    min-height: 480px;
+    margin: 0;
+    margin-right: -50%;
     padding: 25px 0 0 0;
+
+    background-color: #ffffffff;
+    transform: translate(-50%, -50%);
   }
 }

@@ -3,32 +3,36 @@
   margin: 20px 0;
 
   &__item {
-    background-color: #F9F9F9;
     position: relative;
+
+    background-color: #f9f9f9;
   }
 
   &__title {
-    font-family: "Stapel", arial, sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    text-align: left;
     margin: 0 0 24px 12px;
+
+    font-weight: 700;
+    font-size: 32px;
+    font-family: "Stapel", arial, sans-serif;
+    text-align: left;
   }
 }
 
 .listing .listing__text {
-  width: calc(100% - 40px);
-  margin: 0 auto;
-  height: 0;
-  background-color: #F9F9F9;
-  line-height: 18px;
-  padding: 0 30px;
   box-sizing: border-box;
-  transition: color 0.5s, padding 0.5s;
+  width: calc(100% - 40px);
+  height: 0;
+  margin: 0 auto;
+  padding: 0 30px;
   overflow: hidden;
+
   font-size: 16px;
+  line-height: 18px;
   text-align: left;
 
+  background-color: #f9f9f9;
+
+  transition: color 0.5s, padding 0.5s;
 }
 
 .listing__description {
@@ -36,19 +40,22 @@
 }
 
 .listing__label {
-  cursor: pointer;
-  background-color: #F0EBEC;
-  display: block;
-  padding: 26px 12px 26px 12px;
-  box-sizing: border-box;
   z-index: 100;
-  font-size: 18px;
-  font-family: "Stapel", arial, sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  text-align: left;
-  margin-bottom: 10px;
+
+  display: block;
+  box-sizing: border-box;
   min-height: 80px;
+  margin-bottom: 10px;
+  padding: 26px 12px 26px 12px;
+
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 22px;
+  font-family: "Stapel", arial, sans-serif;
+  text-align: left;
+
+  background-color: #f0ebec;
+  cursor: pointer;
 }
 
 .listing input {
@@ -57,49 +64,57 @@
 
 .listing__label:before {
   content: "";
-  width: 48px;
-  height: 48px;
   position: absolute;
   top: 15px;
   right: 13px;
+
+  width: 48px;
+  height: 48px;
+
   background: url("../img/card-next.svg") center no-repeat;
 }
 
-.listing input:checked+label {
-  background-color: #F9F9F9;
+.listing input:checked + label {
+  background-color: #f9f9f9;
 }
 
-.listing input:checked+label:before {
-  transition: transform .35s;
+.listing input:checked + label:before {
   transform: rotate(90deg);
+
+  transition: transform 0.35s;
 }
 
-.listing input:checked+label+.listing__text {
+.listing input:checked + label + .listing__text {
   height: auto;
   margin-top: -5px;
-  color: #000;
   padding: 20px 30px 10px;
+
+  color: #000000;
 }
 
 @media (min-width: @desktop-width) {
   .listing {
-    margin: auto;
     width: 1161px;
+    margin: auto;
 
     &__title {
+      margin-bottom: 32px;
+;
+
       font-size: 64px;
-      margin-bottom: 32px
     }
 
     &__label {
       padding: 32px 0 0 32px;
+
       font-size: 26px;
       line-height: 15px;
     }
 
     &__text {
-      font-size: 20px;
       padding-bottom: 32px;
+
+      font-size: 20px;
     }
 
     &__item {
@@ -112,7 +127,7 @@
   }
 
   .listing .listing__text {
-    margin: 0;
     width: 650px;
+    margin: 0;
   }
 }

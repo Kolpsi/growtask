@@ -1,43 +1,49 @@
 // стили формы
 .form {
   position: relative;
-  background-color: #ffffffff;
+
   width: 330px;
   margin: 0 auto;
 
+  background-color: #ffffffff;
+
   &-wrapper {
     min-height: 825px;
-    background: url("../img/form-background.png") no-repeat bottom;
+
     text-align: center;
+
+    background: url("../img/form-background.png") no-repeat bottom;
   }
 
   &__title {
-    font-family: "Stapel", arial, sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    text-align: left;
     margin: 0 0 16px 38px;
+
+    font-weight: 700;
+    font-size: 32px;
+    font-family: "Stapel", arial, sans-serif;
+    text-align: left;
   }
 
   &__text {
-    font-size: 16px;
+    margin: 0 0 24px 38px;
+
     font-weight: 400;
+    font-size: 16px;
     line-height: 26px;
     text-align: left;
-    margin: 0 0 24px 38px;
   }
 
   &__name {
     width: 300px;
     height: 44px;
-    padding-left: 16px;
     margin: 0 0 0 18px;
+    padding-left: 16px;
 
     &:hover,
     &:focus,
     &:active,
     &:focus-visible {
-      border: 1px solid #BC0000;
+      border: 1px solid #bc0000;
       outline: none;
     }
   }
@@ -45,14 +51,14 @@
   &__number {
     width: 300px;
     height: 44px;
-    padding-left: 16px;
     margin: 44px 0 0 18px;
+    padding-left: 16px;
 
     &:hover,
     &:focus,
     &:active,
     &:focus-visible {
-      border: 1px solid #BC0000;
+      border: 1px solid #bc0000;
       outline: none;
     }
   }
@@ -60,74 +66,83 @@
   &__textarea {
     width: 300px;
     height: 112px;
-    resize: none;
-    padding: 16px 0 0 16px;
     margin: 44px 0 44px 18px;
+    padding: 16px 0 0 16px;
+
+    resize: none;
 
     &:hover,
     &:focus,
     &:active,
     &:focus-visible {
-      border: 1px solid #BC0000;
+      border: 1px solid #bc0000;
       outline: none;
     }
   }
 
   &__button {
-    font-size: 16px;
+    width: 300px;
+    height: 44px;
+    margin: 0 0 16px 0;
+    padding: 12px, 20px, 12px, 20px;
+
     font-weight: 600;
+    font-size: 16px;
     line-height: 20px;
     text-align: center;
+
     background-color: #ffffffff;
-    height: 44px;
-    width: 300px;
-    border-radius: 0px;
-    border: 1px solid #0D0D0D;
-    padding: 12px, 20px, 12px, 20px;
-    margin: 0 0 16px 0;
+    border: 1px solid #0d0d0d;
+    border-radius: 0;
 
     &:hover {
-      background-color: #F63765;
       color: #ffffff;
+
+      background-color: #f63765;
       border: none;
     }
 
     &:active {
-      background-color: #AD0E35;
       color: #ffffff;
+
+      background-color: #ad0e35;
       border: none;
     }
   }
 
   &__button-reset {
-    height: 44px;
     width: 300px;
-    font-weight: 600;
-    border: none;
-    padding: 12px, 0px, 12px, 0px;
-    background-color: #ffffffff;
+    height: 44px;
     margin-bottom: 44px;
+    padding: 12px, 0, 12px, 0;
+
+    font-weight: 600;
+
+    background-color: #ffffffff;
+    border: none;
 
     &:hover {
-      color: #F63765;
+      color: #f63765;
     }
 
     &:active {
-      color: #AD0E35;
+      color: #ad0e35;
     }
   }
 }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
+
+  -webkit-appearance: none;
 }
 
 .error-message {
-  color: #BC0000;
-  text-align: left;
   margin: 0 0 0 30px;
+
+  text-align: left;
+  color: #bc0000;
 }
 
 @media (min-width: @desktop-width) {
@@ -135,26 +150,30 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 480px;
 
     &-wrapper {
-      background: url("../img/form-bg-desktop.jpg") no-repeat left,
-        url("../img/form-bg-desktop2.jpg") no-repeat right;
       margin-bottom: 160px;
+
+      background: url("../img/form-bg-desktop.jpg") no-repeat left,
+      url("../img/form-bg-desktop2.jpg") no-repeat right;
     }
 
     &__container {
       width: 680px;
       min-height: 710px;
-      background-color: #ffffffff;
       margin: 0 auto;
+
+      background-color: #ffffffff;
     }
 
     &__title {
-      font-size: 64px;
       margin: 80px 0 30px 117px;
+
+      font-size: 64px;
     }
 
     &__text {
-      font-size: 20px;
       margin: 0 0 56px 117px;
+
+      font-size: 20px;
     }
 
     &__name {
@@ -170,8 +189,8 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 
     &__button-wrapper {
-      width: 100%;
       display: flex;
+      width: 100%;
     }
 
     &__button {

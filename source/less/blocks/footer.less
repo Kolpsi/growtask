@@ -8,33 +8,39 @@
   }
 
   .site-list__footer {
-    font-size: 24px;
-    margin: 80px 0 0 0;
-    padding: 0;
-    background-color: #ffffffff;
     top: 0;
     left: 0;
-    width: 1920px;
-    height: 80px;
-    margin: auto;
+    z-index: 6;
+
     display: flex;
     justify-content: space-between;
-    z-index: 6;
+    width: 1920px;
     width: 1200px;
+    height: 80px;
+    margin: 80px 0 0 0;
+    margin: auto;
+    padding: 0;
+
+    font-size: 24px;
+
+    background-color: #ffffffff;
   }
   .site-list__footer .modal-button {
-    border: none;
-    font-size: 24px;
-    line-height: 28px;
     margin: 0 0 0 0;
     padding: 0;
+
     font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    border: none;
     &:hover {
-        color:#F63765;
-        background-color: #fff;
-      }
-      &:active {
-        color:#AD0E35;
-      }
+      color: #f63765;
+
+      background-color: #ffffff;
+    }
+    &:active {
+      color: #ad0e35;
+    }
   }
 }

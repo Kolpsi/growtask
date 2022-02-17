@@ -1,16 +1,17 @@
 // модуль слайдера
 .slider {
   &__title {
-    font-family: "Stapel", arial, sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    text-align: left;
     margin: 80px 0 0 12px;
+
+    font-weight: 700;
+    font-size: 32px;
+    font-family: "Stapel", arial, sans-serif;
+    text-align: left;
   }
 
   &-list {
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 }
 
@@ -26,19 +27,19 @@
 @media (min-width: @desktop-width) {
   .slider {
     &__title {
-      font-size: 64px;
       margin: 0 0 0 380px;
+
+      font-size: 64px;
     }
   }
   .slider-list {
     &__item {
       width: 1080px;
     }
-  
+
     &__image {
       height: 800px;
     }
   }
-  
 }
 

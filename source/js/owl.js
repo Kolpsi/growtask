@@ -13,8 +13,8 @@ $(document).ready(function () {
       1200: {
         items: 1,
         navText: ["<img  class='nav-prev'>", "<img  class='nav-next'>"],
-        stagePadding: 480,
-        margin: 0
+        stagePadding: 310,
+        margin: -70
       }
     }
   });

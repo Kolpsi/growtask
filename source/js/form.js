@@ -9,8 +9,9 @@
 
 
 
-
-  // Добавляем обработчик клика на кнопку отправки формы
+  /**
+   * @description Добавляем обработчик клика на кнопку отправки формы
+   */
   submit.addEventListener('click', function (e) {
     const messages = form.querySelectorAll('.error-message');
     if (messages) {
@@ -20,7 +21,7 @@
     for (var i = 0; i < inputs.length; i++) {
       var input = inputs[i];
       if (input.checkValidity() == false) {
-        
+
         input.insertAdjacentHTML('afterend', `<p  class="error-message">` + errorMessage + '</p>')
         input.style.border = '1px solid #BC0000';
       } else {
